@@ -1,0 +1,16 @@
+Fibonacci Speed
+
+Though each fibonacci number (n) is calculated in a simplistic manner, it requires a recursive call which becomes exponentially expensive in time complexity as n grows. The exponential cost is derived by the need to calculate each (n) by calculating (n-1) and (n-2), where (n-1) then again calculates (n-2) again. This pattern is exacerbated as each (n) is recalculated exponentially more times as (n) goes toward infinity.
+
+
+
+Something Else
+
+Describe the values in the things list:
+Each value (n) in the list is calculated by (n-1) + (n-2), similarly to the calculation for fibinacci numbers.
+
+Describe how the values in things are calculated, using what you know about lazy evaluation:
+0 and 1 are prepended to the infinite list being generated. The remaining numbers are generated suming the numbers at each index of each list. As per Haskell's lazy evaluation, each list is generated as is needed, allowing an supposed infinite list to be generated and evaluated. Additionally, since lazy evaluation forms a data structure (a thunk) of the list being created, future recursive calls to "things" references the same data structure. This results in each (n) in the list being calculated only once.
+
+Evaluate things!!33 and things!!45. Why is this calculation so much faster than calculating the values in the list fibs?
+The calculations are much faster since for each n <= 35 and n <= 45 respectively, is calculated only once. This is possible as the result of lazy evaluation forming a data structure (a thunk) to represent the list, and any recursive calls to "things" simply refer to previously calculated values rather than generating new lists that recalculate each (n) (as does our fib function does). 
