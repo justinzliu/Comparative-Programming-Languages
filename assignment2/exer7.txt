@@ -1,0 +1,61 @@
+-----------------------
+Language Description #1 
+-----------------------
+
+Indicate which version of the language you're talking about: C++11, C++17 (or Java 9, 10 etc). 
+- C++17 
+
+Overall programming paradigm (imperative, functional, object oriented, logic programming, etc.). 
+- Imperative, language binds function with states 
+
+Compiled, interpreted, bytecode compiled, JIT compiled (for the most common tools: either GCC or Clang). 
+- Compiled, gcc and clang both compile c++ code to machine code 
+
+Static or dynamic types. Static or dynamic binding. 
+- Static typed, type checking is done at compile time 
+- Static binding, function definition and function call is linked during compile time, however, c++17 has dynamic binding as well (derived classes with functions from virtual void functions) 
+
+Strong or weak typing 
+- Strong typing, the language requires programmers to specify the types of variables in use. However, there are instances of weak typing; int used as bool, arithmetic conversions, etc. 
+
+Manual memory management or garbage collected (and garbage collection algorithm). 
+- Manual memory mangement through new and delete calls. Use of unique_ptr and shared_ptr eliminates the need for a garbage collector. 
+
+Has first-class functions? Has closures? 
+- C++17 has first-class functions in the form of lambdas. Closure for lambdas is declared within the [] argument of a lambda declaration. 
+
+What support for concurrent/parallel programming is available? 
+- Standard library execution policies std::execution offers parallelism for standard library functions. 
+- fork() from unistd.h allows for multiprocesses 
+- std::mutex also offers support for exclusive use on shared resources 
+
+ 
+-----------------------
+Language Description #2 
+-----------------------
+ 
+
+Indicate which version of the language you're talking about
+- Scala 
+
+Overall programming paradigm (imperative, functional, object oriented, logic programming, etc.). 
+- Functional (currying, immutability, lazy evaluation, pattern matching) and object-oriented (Java styled)
+
+Compiled, interpreted, bytecode compiled, JIT compiled (for the most common tools: either GCC or Clang). 
+- Compiled to java bytecode 
+
+Static or dynamic types. Static or dynamic binding. 
+- Static typed, type checking is done at compile time 
+- Static binding, function definition and function call is linked during compile time 
+
+Strong or weak typing 
+- Strong typing, the language requires programmers to specify the types of variables in use 
+
+Manual memory management or garbage collected (and garbage collection algorithm). 
+- Scala has a garbage collector to handle memory management 
+
+Has first-class functions? Has closures? 
+- Scala allows for functions to be passed as arguments, as such has first-class functions. Scala also has closures as variables outside of a first-class function may be referenced. 
+
+What support for concurrent/parallel programming is available? 
+- Parallel collections is a library in scala that allows for multiprocessing and multithreading on few functions. 
